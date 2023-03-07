@@ -10,7 +10,7 @@ module.exports = {
   pluginSearchDirs: false,
 
   /** IMPORT SORT OPTIONS */
-  importOrder: ["<THIRD_PARTY_MODULES>", "^@lucidstorage/(.*)$", "^[./]"],
+  importOrder: ["<THIRD_PARTY_MODULES>", "^@/(.*)", "^[./]"],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
 };
