@@ -1,7 +1,16 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Times New Roman", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "InterVariable", "Inter", "Times New Roman", sans-serif;
+  }
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.frc-bg {
+  @apply bg-gradient-to-tr from-[#ED1C24]  to-[#0066B3];
+}

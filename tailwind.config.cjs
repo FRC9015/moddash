@@ -1,3 +1,4 @@
+/* eslint-disable */
 const defaults = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
@@ -7,7 +8,7 @@ module.exports = {
     extend: {
       extend: {
         fontFamily: {
-          sans: ["Inter", ...defaults.fontFamily.sans],
+          // sans: ["InterVariable", "Inter", ...defaults.fontFamily.sans],
         },
       },
     },
