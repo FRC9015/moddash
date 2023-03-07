@@ -1,12 +1,16 @@
+/* eslint-disable */
 module.exports = {
   tabWidth: 2,
   semi: true,
   singleQuote: false,
   trailingComma: "es5",
-  printWidth: 100,
+  printWidth: 80,
   arrowParens: "always",
 
-  plugins: ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+  plugins: [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss",
+  ],
   pluginSearchDirs: false,
 
   /** IMPORT SORT OPTIONS */
