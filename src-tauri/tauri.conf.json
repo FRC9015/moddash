@@ -7,7 +7,7 @@
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "frcdash",
+    "productName": "ModDash",
     "version": "0.0.0"
   },
   "tauri": {
@@ -27,7 +27,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.henrikvt.moddash",
       "targets": "all"
     },
     "security": {

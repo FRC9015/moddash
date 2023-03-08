@@ -1,8 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@dnd-kit/core': ^6.0.8
+  '@dnd-kit/sortable': ^7.0.2
   '@fontsource/inter': ^4.5.15
   '@swan-io/chicane': ^1.3.4
+  '@tailwindcss/forms': ^0.5.3
   '@tauri-apps/api': ^1.2.0
   '@tauri-apps/cli': ^1.2.2
   '@trivago/prettier-plugin-sort-imports': ^4.1.1
@@ -13,6 +16,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.54.1
   '@vitejs/plugin-react': ^3.0.0
   autoprefixer: ^10.4.13
+  clsx: ^1.2.1
   eslint: ^8.35.0
   eslint-config-prettier: ^8.7.0
   eslint-plugin-react: ^7.32.2
@@ -33,9 +37,12 @@ specifiers:
   zustand: ^4.3.6
 
 dependencies:
+  '@dnd-kit/core': 6.0.8_biqbaboplfbrettd7655fr4n2y
+  '@dnd-kit/sortable': 7.0.2_52scne4zmdeyjh2otzkgz2xfvu
   '@fontsource/inter': 4.5.15
   '@swan-io/chicane': 1.3.4_react@18.2.0
   '@tauri-apps/api': 1.2.0
+  clsx: 1.2.1
   ntcore-react: 1.1.0
   ntcore-ts-client: 0.2.0
   react: 18.2.0
@@ -46,6 +53,7 @@ dependencies:
   zustand: 4.3.6_react@18.2.0
 
 devDependencies:
+  '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.7
   '@tauri-apps/cli': 1.2.3
   '@trivago/prettier-plugin-sort-imports': 4.1.1_prettier@2.8.4
   '@types/node': 18.14.6
@@ -337,6 +345,49 @@ packages:
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
     dev: true
+
+  /@dnd-kit/accessibility/3.0.1_react@18.2.0:
+    resolution: {integrity: sha512-HXRrwS9YUYQO9lFRc/49uO/VICbM+O+ZRpFDe9Pd1rwVv2PCNkRiTZRdxrDgng/UkvdC3Re9r2vwPpXXrWeFzg==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+      tslib: 2.5.0
+    dev: false
+
+  /@dnd-kit/core/6.0.8_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-lYaoP8yHTQSLlZe6Rr9qogouGUz9oRUj4AHhDQGQzq/hqaJRpFo65X+JKsdHf8oUFBzx5A+SJPUvxAwTF2OabA==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      '@dnd-kit/accessibility': 3.0.1_react@18.2.0
+      '@dnd-kit/utilities': 3.2.1_react@18.2.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      tslib: 2.5.0
+    dev: false
+
+  /@dnd-kit/sortable/7.0.2_52scne4zmdeyjh2otzkgz2xfvu:
+    resolution: {integrity: sha512-wDkBHHf9iCi1veM834Gbk1429bd4lHX4RpAwT0y2cHLf246GAvU2sVw/oxWNpPKQNQRQaeGXhAVgrOl1IT+iyA==}
+    peerDependencies:
+      '@dnd-kit/core': ^6.0.7
+      react: '>=16.8.0'
+    dependencies:
+      '@dnd-kit/core': 6.0.8_biqbaboplfbrettd7655fr4n2y
+      '@dnd-kit/utilities': 3.2.1_react@18.2.0
+      react: 18.2.0
+      tslib: 2.5.0
+    dev: false
+
+  /@dnd-kit/utilities/3.2.1_react@18.2.0:
+    resolution: {integrity: sha512-OOXqISfvBw/1REtkSK2N3Fi2EQiLMlWUlqnOK/UpOISqBZPWpE6TqL+jcPtMOkE8TqYGiURvRdPSI9hltNUjEA==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+      tslib: 2.5.0
+    dev: false
 
   /@emotion/hash/0.9.0:
     resolution: {integrity: sha512-14FtKiHhy2QoPIzdTcvh//8OyBlknNs2nXRwIhG904opCby3l+9Xaf/wuPvICBF0rc1ZCNBd3nKe9cd2mecVkQ==}
@@ -660,6 +711,15 @@ packages:
       react: 18.2.0
       use-sync-external-store: 1.2.0_react@18.2.0
     dev: false
+
+  /@tailwindcss/forms/0.5.3_tailwindcss@3.2.7:
+    resolution: {integrity: sha512-y5mb86JUoiUgBjY/o6FJSFZSEttfb3Q5gllE4xoKjAAD+vBrnIhE4dViwUuow3va8mpH4s9jyUbUbrRGoRdc2Q==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+    dependencies:
+      mini-svg-data-uri: 1.4.4
+      tailwindcss: 3.2.7_postcss@8.4.21
+    dev: true
 
   /@tauri-apps/api/1.2.0:
     resolution: {integrity: sha512-lsI54KI6HGf7VImuf/T9pnoejfgkNoXveP14pVV7XarrQ46rOejIVJLFqHI9sRReJMGdh2YuCoI3cc/yCWCsrw==}
@@ -1183,6 +1243,11 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+    dev: false
 
   /color-convert/1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
@@ -2113,6 +2178,11 @@ packages:
     dependencies:
       braces: 3.0.2
       picomatch: 2.3.1
+    dev: true
+
+  /mini-svg-data-uri/1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
     dev: true
 
   /minimatch/3.1.2:

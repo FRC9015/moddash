@@ -11,6 +11,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fun FIRST-themed background gradient effect */
 .frc-bg {
   @apply bg-gradient-to-tr from-[#ED1C24]  to-[#0066B3];
 }

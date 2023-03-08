@@ -17,6 +17,11 @@ module.exports = {
     },
   },
 
+  env: {
+    browser: true,
+    node: true,
+  },
+
   rules: {
     "react-refresh/only-export-components": "warn",
     "no-undef": "warn",
