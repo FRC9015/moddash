@@ -1,8 +1,22 @@
 import { NTProvider } from "ntcore-react";
 import { FC } from "react";
+import { withErrorBoundary } from "react-error-boundary";
+
+import { useSelectNTConnection } from "@/state/useSelectNTConnection";
 
 const Page: FC = () => {
-  return <div></div>;
+  const robotURI = useSelectNTConnection((state) => state.robotUri);
+
+  if (!robotURI) {
+    throw new Error("We're screwed");
+  }
+
+  return <NTProvider uri={robotURI}></NTProvider>;
 };
 
-export default Page;
+const PageWithErrorBoundary = withErrorBoundary(Page, {
+  // eslint-disable-next-line react/prop-types
+  FallbackComponent: (props) => <>{props.error}</>,
+});
+
+export default PageWithErrorBoundary;
