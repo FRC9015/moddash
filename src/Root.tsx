@@ -1,3 +1,4 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { match } from "ts-pattern";
 
 import Dashboard from "@/pages/Dashboard";
@@ -7,18 +8,20 @@ import NotFound from "./NotFound";
 import { UtilBar } from "./components/UtilBar";
 import { router } from "./router";
 
+const queryClient = new QueryClient();
+
 export const Root = () => {
   const routes = router.useRoute(["Home", "Dashboard"]);
 
   return (
-    <>
-      <UtilBar />
+    <QueryClientProvider client={queryClient}>
+      {/* <UtilBar /> */}
       {match(routes)
         .with({ name: "Home" }, () => <Home />)
         .with({ name: "Dashboard" }, () => <Dashboard />)
         .otherwise(() => (
           <NotFound />
         ))}
-    </>
+    </QueryClientProvider>
   );
 };
