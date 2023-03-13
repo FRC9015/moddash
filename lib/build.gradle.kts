@@ -29,6 +29,8 @@ dependencies {
     implementation("edu.wpi.first.wpimath:wpimath-java:2023.+")
     implementation("edu.wpi.first.wpilibNewCommands:wpilibNewCommands-java:2023.+")
 
+    implementation("org.json:json:20230227")
+
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
 }
