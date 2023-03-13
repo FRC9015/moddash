@@ -47,7 +47,7 @@ const RioInput = () => {
     setValue(value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setDisabled(true);
     console.log({ value });
 
@@ -56,7 +56,12 @@ const RioInput = () => {
       return;
     }
 
-    setURIWithTeamNo(value);
+    await new Promise((resolve) => {
+      setTimeout(() => {
+        setURIWithTeamNo(value);
+        resolve("done");
+      }, 100);
+    });
 
     router.push("Dashboard");
   };
@@ -125,7 +130,7 @@ const SimulationInput = () => {
     setValue(value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setDisabled(true);
 
     if (Number.isNaN(value)) {
@@ -133,7 +138,12 @@ const SimulationInput = () => {
       return;
     }
 
-    setURIWithLocalhost(value);
+    await new Promise((resolve) => {
+      setTimeout(() => {
+        setURIWithLocalhost(value);
+        resolve("done");
+      }, 100);
+    });
 
     router.push("Dashboard");
   };
