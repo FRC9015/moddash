@@ -7,7 +7,7 @@ import useNTConnectionState from "@/utils/nt/useNTConnectionState";
 export const Connection: FC = () => {
   const { connected } = useNTConnectionState();
   return (
-    <div className="m-1 inline-flex w-[8.5rem] border-spacing-0 justify-between rounded border-2 border-gray-100 p-1 text-sm hover:cursor-pointer hover:bg-gray-300">
+    <div className="m-1 inline-flex w-[8.5rem] border-spacing-0 justify-between rounded border-2 border-gray-200 p-1 text-sm hover:cursor-pointer hover:bg-gray-300">
       {match(connected)
         .with("connected", () => (
           <>

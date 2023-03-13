@@ -6,7 +6,9 @@ interface State {
   inputOption: InputOption;
   robotUri?: string;
   robotPort?: number;
+  modalOpen: boolean;
 
+  setModalOpen: (open: boolean) => void;
   setInputOption: (opt: InputOption) => void;
   setURIWithTeamNo: (team: number, port?: number) => void;
   setURIWithLocalhost: (port?: number) => void;
@@ -15,7 +17,9 @@ interface State {
 export const useSelectNTConnection = create<State>((set) => ({
   inputOption: "rio",
   robotPort: 5810,
+  modalOpen: false,
 
+  setModalOpen: (open) => set({ modalOpen: open }),
   setInputOption: (opt) => set({ inputOption: opt }),
 
   setURIWithLocalhost: (port = 5810) =>

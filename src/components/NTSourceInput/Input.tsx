@@ -25,6 +25,7 @@ const RioInput = () => {
   const setURIWithTeamNo = useSelectNTConnection(
     (state) => state.setURIWithTeamNo
   );
+  const setModalOpen = useSelectNTConnection((state) => state.setModalOpen);
 
   // eslint-disable-next-line no-undef
   const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
@@ -60,9 +61,10 @@ const RioInput = () => {
       setTimeout(() => {
         setURIWithTeamNo(value);
         resolve("done");
-      }, 100);
+      }, 50);
     });
 
+    setModalOpen(false);
     router.push("Dashboard");
   };
 
@@ -92,7 +94,7 @@ const RioInput = () => {
         </span>
         <button
           onClick={handleSubmit}
-          className="ml-4 h-10 w-10 rounded-md bg-blue-700 p-2"
+          className="ml-4 h-10 w-10 rounded-md bg-blue-700 p-2 text-white"
         >
           Go
         </button>
@@ -108,6 +110,7 @@ const SimulationInput = () => {
   const setURIWithLocalhost = useSelectNTConnection(
     (state) => state.setURIWithLocalhost
   );
+  const setModalOpen = useSelectNTConnection((state) => state.setModalOpen);
 
   // eslint-disable-next-line no-undef
   const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
@@ -142,9 +145,10 @@ const SimulationInput = () => {
       setTimeout(() => {
         setURIWithLocalhost(value);
         resolve("done");
-      }, 100);
+      }, 50);
     });
 
+    setModalOpen(false);
     router.push("Dashboard");
   };
 
@@ -174,7 +178,7 @@ const SimulationInput = () => {
         />
         <button
           onClick={handleSubmit}
-          className="ml-4 h-10 w-10 rounded-md bg-blue-700 p-2"
+          className="ml-4 h-10 w-10 rounded-md bg-blue-700 p-2 text-white"
         >
           Go
         </button>
