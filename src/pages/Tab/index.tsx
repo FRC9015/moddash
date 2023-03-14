@@ -1,6 +1,10 @@
 import { FC } from "react";
 
-const Page: FC = () => {
+type Props = {
+  tabId: string;
+};
+
+const Page: FC<Props> = () => {
   return <div></div>;
 };
 
