@@ -1,10 +1,9 @@
 import type { Preview } from "@storybook/react";
 
+import "../src/styles.css";
+
 const preview: Preview = {
   parameters: {
-    backgrounds: {
-      default: "light",
-    },
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
@@ -12,6 +11,15 @@ const preview: Preview = {
         date: /Date$/,
       },
     },
+    backgrounds: {
+      default: "white",
+      values: [
+        { name: "white", value: "#ffffff" },
+        { name: "grey-50", value: "#f9fafb" },
+        { name: "grey-100", value: "#f3f4f6" },
+      ],
+    },
+    layout: "centered",
   },
 };
 
