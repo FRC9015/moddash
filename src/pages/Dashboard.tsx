@@ -8,6 +8,13 @@ import Tab from "@/pages/Tab";
 import { router } from "@/router";
 import { useSelectNTConnection } from "@/state/useSelectNTConnection";
 import NTProvider from "@/utils/nt/NTProvider";
+import { useFMSValues } from "@/utils/nt/useFMSValues";
+
+const DashboardRoot: FC = () => {
+  const data = useFMSValues();
+  console.log("root render");
+  return <>{JSON.stringify(data)}</>;
+};
 
 const Page: FC = () => {
   const robotURI = useSelectNTConnection((state) => state.robotUri);
@@ -22,8 +29,10 @@ const Page: FC = () => {
       <TabBar />
       {match(routes)
         .with({ name: "Tab" }, ({ params: { tab } }) => <Tab tabId={tab} />)
-        .with({ name: "Dashboard" }, () => null)
-        .otherwise(() => null)}
+        .with({ name: "Dashboard" }, () => <DashboardRoot />)
+        .otherwise(() => (
+          <DashboardRoot />
+        ))}
       <NTSourceModal />
     </NTProvider>
   );

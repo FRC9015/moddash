@@ -1,5 +1,6 @@
 import { FC } from "react";
 
+import { Alliance } from "./Alliance";
 import { Connection } from "./Connected";
 import { SettingsDropdown } from "./SettingsDropdown";
 
@@ -9,6 +10,7 @@ export const TabBar: FC = () => {
       <SettingsDropdown>
         <Connection />
       </SettingsDropdown>
+      <Alliance />
     </nav>
   );
 };
