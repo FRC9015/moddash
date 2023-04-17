@@ -1,24 +1,20 @@
-import { NetworkTablesTypeInfos } from "ntcore-ts-client";
 import { FC } from "react";
 
-import { useBaseMDProperties } from "@/utils/moddash/useBaseMDProperties";
-import useNTValue from "@/utils/nt/useNTValue";
+import { WidgetInfo } from "@/components/Widgets/WidgetInfo";
+import { useMDWidgets } from "@/utils/moddash/useMDWidgets";
 
 type Props = {
   tabId: string;
 };
 
-const Page: FC<Props> = () => {
-  const mode = useBaseMDProperties("mode");
-  const modedata = useNTValue(
-    "/moddash/Dashboard/mode/value",
-    NetworkTablesTypeInfos.kString,
-    "init"
-  );
+const Page: FC<Props> = ({ tabId }) => {
+  const widgets = useMDWidgets(tabId);
+
   return (
     <div>
-      <div>{JSON.stringify(mode)}</div>
-      <div>{JSON.stringify(modedata)}</div>
+      {widgets.map((name) => (
+        <WidgetInfo tabId={tabId} widgetName={name} key={name} />
+      ))}
     </div>
   );
 };

@@ -5,7 +5,6 @@ import Dashboard from "@/pages/Dashboard";
 import Home from "@/pages/Home";
 
 import NotFound from "./NotFound";
-import { UtilBar } from "./components/UtilBar";
 import { router } from "./router";
 
 const queryClient = new QueryClient();
@@ -15,7 +14,6 @@ export const Root = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* <UtilBar /> */}
       {match(routes)
         .with({ name: "Home" }, () => <Home />)
         .with({ name: "Dashboard" }, () => <Dashboard />)
