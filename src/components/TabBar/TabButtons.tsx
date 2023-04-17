@@ -7,7 +7,6 @@ import { useMDTabs } from "@/utils/moddash/useMDTabs";
 
 export const TabButtons: FC = () => {
   const tabs = useMDTabs();
-  console.log({ tabs });
   return (
     <div className=" flex grow flex-row flex-nowrap space-x-2 border-l-2 border-l-gray-200 px-2">
       {tabs.map((tabName) => (
