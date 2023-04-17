@@ -4,7 +4,7 @@ import { match } from "ts-pattern";
 
 import NotFound from "@/NotFound";
 import { NTSourceModal } from "@/components/NTSourceInput/Modal";
-import { TabBar } from "@/components/Tabs";
+import { TabBar } from "@/components/TabBar";
 import Tab from "@/pages/Tab";
 import { router } from "@/router";
 import { useSelectNTConnection } from "@/state/useSelectNTConnection";
