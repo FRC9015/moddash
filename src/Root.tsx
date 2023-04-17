@@ -11,7 +11,7 @@ import { router } from "./router";
 const queryClient = new QueryClient();
 
 export const Root = () => {
-  const routes = router.useRoute(["Home", "Dashboard"]);
+  const routes = router.useRoute(["Home", "Dashboard", "Tab"]);
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -19,6 +19,7 @@ export const Root = () => {
       {match(routes)
         .with({ name: "Home" }, () => <Home />)
         .with({ name: "Dashboard" }, () => <Dashboard />)
+        .with({ name: "Tab" }, () => <Dashboard />)
         .otherwise(() => (
           <NotFound />
         ))}
