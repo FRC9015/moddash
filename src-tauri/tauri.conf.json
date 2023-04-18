@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "ModDash",
-    "version": "0.0.0"
+    "version": "../package.json"
   },
   "tauri": {
     "allowlist": {
@@ -27,7 +27,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.henrikvt.moddash",
+      "identifier": "frc.qefrc.moddash",
       "targets": "all"
     },
     "security": {
@@ -38,11 +38,9 @@
     },
     "windows": [
       {
-        "fullscreen": false,
+        "fullscreen": true,
         "resizable": true,
-        "title": "frcdash",
-        "width": 800,
-        "height": 600
+        "title": "Mod Dash"
       }
     ]
   }
