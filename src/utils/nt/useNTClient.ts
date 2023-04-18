@@ -1,4 +1,4 @@
-import { NetworkTables } from "ntcore-ts-client";
+import { type NetworkTables } from "ntcore-ts-client";
 import { useContext } from "react";
 
 import { NTContext } from "./NTProvider";

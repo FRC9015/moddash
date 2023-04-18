@@ -1,5 +1,5 @@
 import { SignalIcon, SignalSlashIcon } from "@heroicons/react/24/solid";
-import { FC } from "react";
+import { type FC } from "react";
 import { match } from "ts-pattern";
 
 import useNTConnectionState from "@/utils/nt/useNTConnectionState";

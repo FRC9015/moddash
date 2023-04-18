@@ -2,7 +2,7 @@ import { Suspense } from "react";
 
 import { usePropertiesInTab } from "@/utils/moddash/usePropertiesInTab";
 
-import { Widget, widgetMap } from "./utils";
+import { type Widget, widgetMap } from "./utils";
 
 const SCALAR = 4;
 

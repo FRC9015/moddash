@@ -1,5 +1,5 @@
 import { NetworkTables } from "ntcore-ts-client";
-import { ReactNode, createContext } from "react";
+import { type ReactNode, createContext } from "react";
 import { useEffect, useState } from "react";
 
 type NTContextType = NetworkTables | null;

@@ -1,8 +1,8 @@
-import { NetworkTablesTypeInfo } from "ntcore-ts-client";
+import { type NetworkTablesTypeInfo } from "ntcore-ts-client";
 import { useContext } from "react";
 
 import { TabContext } from "@/components/Tab/TabContainer";
-import { NTTopicTypes } from "@/types/nt";
+import { type NTTopicTypes } from "@/types/nt";
 
 import useNTValue from "../nt/useNTValue";
 

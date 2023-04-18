@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { type FC } from "react";
 
 import { Alliance } from "./Alliance";
 import { Connection } from "./Connected";

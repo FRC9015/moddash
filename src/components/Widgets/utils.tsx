@@ -1,4 +1,4 @@
-import { FC, LazyExoticComponent, lazy } from "react";
+import { type FC, type LazyExoticComponent, lazy } from "react";
 
 export type WidgetProps = { widgetName: string };
 export type Widget = FC<WidgetProps>;

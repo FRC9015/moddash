@@ -1,5 +1,5 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { FC, Fragment } from "react";
+import { type FC, Fragment } from "react";
 
 import { useSelectNTConnection } from "@/state/useSelectNTConnection";
 

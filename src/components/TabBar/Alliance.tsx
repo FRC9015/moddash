@@ -1,5 +1,5 @@
 import { FlagIcon } from "@heroicons/react/24/solid";
-import { FC } from "react";
+import { type FC } from "react";
 
 import { useFMSValues } from "@/utils/nt/useFMSValues";
 

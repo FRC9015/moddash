@@ -1,4 +1,4 @@
-import { FC, createContext } from "react";
+import { type FC, createContext } from "react";
 
 import { WidgetRender } from "./WidgetRender";
 

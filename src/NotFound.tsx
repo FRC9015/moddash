@@ -1,5 +1,5 @@
 import { Link } from "@swan-io/chicane";
-import { FC } from "react";
+import { type FC } from "react";
 
 import { router } from "@/router";
 

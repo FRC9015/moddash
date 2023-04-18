@@ -1,7 +1,7 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Link } from "@swan-io/chicane";
 import classNames from "clsx";
-import { FC, Fragment, ReactNode } from "react";
+import { type FC, Fragment, type ReactNode } from "react";
 
 import { router } from "@/router";
 import { useSelectNTConnection } from "@/state/useSelectNTConnection";

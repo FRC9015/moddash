@@ -1,6 +1,6 @@
 import { Link } from "@swan-io/chicane";
 import clsx from "clsx";
-import { FC } from "react";
+import { type FC } from "react";
 
 import { router } from "@/router";
 import { useMDTabs } from "@/utils/moddash/useMDTabs";

@@ -3,7 +3,7 @@ import { NetworkTablesTypeInfos } from "ntcore-ts-client";
 import { usePropertiesInTab } from "@/utils/moddash/usePropertiesInTab";
 import { useValueInTab } from "@/utils/moddash/useValueInTab";
 
-import { Widget } from "./utils";
+import { type Widget } from "./utils";
 
 // eslint-disable-next-line react/prop-types
 export const BooleanDisplayWidget: Widget = ({ widgetName }) => {

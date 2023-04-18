@@ -1,7 +1,7 @@
-import { NetworkTablesTopic, NetworkTablesTypeInfo } from "ntcore-ts-client";
+import { type NetworkTablesTopic, type NetworkTablesTypeInfo } from "ntcore-ts-client";
 import { useContext, useEffect, useState } from "react";
 
-import { NTTopicTypes } from "@/types/nt";
+import { type NTTopicTypes } from "@/types/nt";
 
 import { NTContext } from "./NTProvider";
 

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { type FC } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { match } from "ts-pattern";
 

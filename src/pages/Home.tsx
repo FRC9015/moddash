@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { type FC } from "react";
 
 import { NTInput } from "@/components/NTSourceInput/Input";
 import { NTInputOptions } from "@/components/NTSourceInput/Options";
