@@ -1,5 +1,8 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 // eslint-disable-next-line no-undef
-/** @type {import('eslint').ESLint.ConfigData} */
+const path = require("path");
+
+/** @type {import("eslint").Linter.Config} */
 module.exports = {
   extends: [
     "eslint:recommended",
@@ -16,6 +19,16 @@ module.exports = {
       version: "detect",
     },
   },
+  parserOptions: {
+    project: path.join(__dirname, "tsconfig.json"),
+  },
+  ignorePatterns: [
+    "node_modules/",
+    "dist/",
+    "src-tauri/target/",
+    "vite.config.ts",
+    "*.cjs",
+  ],
   env: {
     browser: true,
     node: true,
@@ -23,6 +36,14 @@ module.exports = {
   rules: {
     "react-refresh/only-export-components": "warn",
     "no-undef": "warn",
+    "@typescript-eslint/consistent-type-imports": [
+      "warn",
+      {
+        prefer: "type-imports",
+        fixStyle: "inline-type-imports",
+      },
+    ],
+    "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
   },
   overrides: [
     {
