@@ -9,4 +9,5 @@ type WidgetMap = {
 
 export const widgetMap: WidgetMap = {
   ["StringWidget"]: lazy(() => import("./StringWidget")),
+  ["BooleanDisplayWidget"]: lazy(() => import("./BooleanDisplayWidget")),
 };
